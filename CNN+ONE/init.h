@@ -66,6 +66,7 @@ map<string,vector<int> > bags_train, bags_test;
 void init() {
 	FILE *f = fopen("../data/vec.bin", "rb");
 	FILE *fout = fopen("../data/vector1.txt", "w");
+	cout<<"start reading word vec" << endl;
 	fscanf(f, "%d", &wordTotal);
 	fscanf(f, "%d", &dimension);
 	cout<<"wordTotal=\t"<<wordTotal<<endl;

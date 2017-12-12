@@ -65,7 +65,7 @@ vector<string> b;
 double tot;
 vector<pair<string, pair<int,double> > >aa;
 
-pthread_mutex_t mutex;
+pthread_mutex_t mutexx;
 vector<int> ll_test;
 
 
@@ -157,13 +157,13 @@ void* testMode(void *id )
 			}
 			sum[j] = max(sum[j],res[j]/tmp);
 		}
-		pthread_mutex_lock (&mutex);
+		pthread_mutex_lock (&mutexx);
 		for (int j = 1; j < relationTotal; j++) 
 		{
 			int i = bags_test[b[ii]][0];
 			aa.push_back(make_pair(b[ii]+"\t"+nam[j],make_pair(ok.count(j),sum[j])));
 		}
-		pthread_mutex_unlock(&mutex);
+		pthread_mutex_unlock(&mutexx);
 	}
 
 	free(r);

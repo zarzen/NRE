@@ -21,7 +21,7 @@ double score = 0;
 float alpha1;
 
 struct timeval t_start,t_end; 
-long start,end;
+long start,end_time;
 
 void time_begin()
 {
@@ -32,8 +32,8 @@ void time_begin()
 void time_end()
 {
   gettimeofday(&t_end, NULL); 
-  end = ((long)t_end.tv_sec)*1000+(long)t_end.tv_usec/1000; 
-  cout<<"time(s):\t"<<(double(end)-double(start))/1000<<endl;
+  end_time = ((long)t_end.tv_sec)*1000+(long)t_end.tv_usec/1000; 
+  cout<<"time(s):\t"<<(double(end_time)-double(start))/1000<<endl;
 }
 
 
